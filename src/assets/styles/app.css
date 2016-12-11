@@ -1,0 +1,50 @@
+.app-loading {
+    font-size: 20px;
+    color: #666666;
+    margin: 5em;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.application {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+img.navbar-brand {
+    padding-right: 0px;
+}
+
+.navbar-form.navbar-right {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.navbar .fa-search {
+    font-size: 18px;
+    color: #999999;
+    cursor: hand;
+
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-table {
+    display: table;
+}
+
+.ng-invalid.ng-touched:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+}
+
+.error{
+    padding: 12px;
+   /* background-color: rgba(255, 0, 0, 0.2);*/
+    color: red;
+}

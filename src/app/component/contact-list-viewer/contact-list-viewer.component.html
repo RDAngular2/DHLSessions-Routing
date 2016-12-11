@@ -1,0 +1,12 @@
+<div class="list-group d-table" >
+    <a *ngFor="let c of contacts|async;"  class="list-group-item"    routerLinkActive="active">
+        <div>
+            <div [routerLink]="['./contact',c.id]">
+                <contact-viewer [contact]="c" class="d-inline-block" ></contact-viewer>
+            </div>
+            <div>
+                <button class="btn btn-default" (click)="composeMessage(c)" >Compose Message</button>
+            </div>
+        </div>
+    </a>
+</div>

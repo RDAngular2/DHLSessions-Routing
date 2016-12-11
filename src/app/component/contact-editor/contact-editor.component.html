@@ -1,0 +1,23 @@
+<form novalidate #contactForm="ngForm" *ngIf="contact != null">
+    <div class="form-group" >
+        <label>First Name</label><span  class="error" *ngIf="!firstNameInput.valid && firstNameInput.touched">The first name is required</span>
+        <input type="text" [(ngModel)]="contact.firstName" class="form-control" name="firstName" #firstNameInput="ngModel" [disabled]="!editing" required>
+    </div>
+    <div class="form-group">
+        <label>Last Name</label><span class="error" *ngIf="!lastNameInput.valid && lastNameInput.touched">The last name is required</span>
+        <input type="text" [(ngModel)]="contact.lastName" class="form-control" name="lastName" #lastNameInput="ngModel" [disabled]="!editing" required>
+    </div>
+    <div class="form-group">
+        <label>Phone</label>
+        <input type="text" [(ngModel)]="contact.phone" class="form-control" name="phone" #phoneInput="ngModel" [disabled]="!editing">
+    </div>
+    <div class="form-group">
+        <label>Country</label><span  class="error" *ngIf="!countryInput.valid && countryInput.touched">The country is required</span>
+        <input [(ngModel)]="contact.country" [typeahead]="countries" class="form-control" name="country" #countryInput="ngModel" required [disabled]="!editing">
+    </div>
+    <button type="button" class="btn btn-primary" *ngIf="!editing" (click)="edit()">Edit</button>
+    <button type="button" class="btn btn-primary" *ngIf="editing" (click)="save()">Save</button>
+    <button type="button" class="btn btn-default" *ngIf="!editing" (click)="close()">Close</button>
+    <button type="button" class="btn btn-default" *ngIf="editing" (click)="cancel()">Cancel</button>
+</form>
+{{contact|json}}
