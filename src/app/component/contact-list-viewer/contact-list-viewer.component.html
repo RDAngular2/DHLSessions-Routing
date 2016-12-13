@@ -1,5 +1,5 @@
 <div class="list-group d-table" >
-    <a *ngFor="let c of contacts|async;"  class="list-group-item"    routerLinkActive="active">
+    <a *ngFor="let c of contacts|async;"  class="list-group-item"   >
         <div>
             <div [routerLink]="['./contact',c.id]">
                 <contact-viewer [contact]="c" class="d-inline-block" ></contact-viewer>

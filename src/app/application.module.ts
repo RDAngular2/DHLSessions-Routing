@@ -26,14 +26,8 @@ import {MessageListViewerComponent} from "./component/message-list-viewer/messag
 
 
 const applicationRoutes: Routes = [
-    { path: "", redirectTo: "/contacts", pathMatch: "full" },
-    { path: "contacts", component: ContactScreen,
-        children : [
-            {path: "contact/:id", component: ContactEditorComponent, canDeactivate: [EditCancelationGuard] }
-        ]
-    },
-    { path: "inbox", component: InboxScreenComponent },
-    { path: "compose/:contactId", outlet: "popup", component: ComposeMessageDialogComponent}
+//    { path: "", redirectTo: "/contacts", pathMatch: "full" },
+
 ];
 
 @NgModule({

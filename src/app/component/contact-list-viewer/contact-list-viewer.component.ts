@@ -24,14 +24,11 @@ export class ContactListViewerComponent implements OnInit {
     }
 
     composeMessage(contact:Contact) : void {
-        this.router.navigate(['/',{outlets:{popup:['compose',contact.id]}}])
+
     }
 
     ngOnInit() {
         this.refresh();
-        this.route.params.subscribe(
-          params => this.refresh()
-        );
     }
 
 

@@ -30,7 +30,13 @@
       'toastr-ng2': 'node_modules/toastr-ng2/toastr.js'
 
 	  
-    }
+    },
+
+    packages : {
+          rxjs: {
+              main: "./Rx.js"
+          }
+      }
 
   });
 })(this);
