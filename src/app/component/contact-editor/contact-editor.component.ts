@@ -1,4 +1,4 @@
-import {Component, Input, ViewChild, OnInit, Output, EventEmitter} from '@angular/core';
+import {Component, Input, ViewChild, OnInit, Output, EventEmitter, OnDestroy} from '@angular/core';
 import {Contact} from "../../model/contact";
 import {ContactData} from "../../demo-data/contact-data";
 import {NgForm} from "@angular/forms";
@@ -16,7 +16,7 @@ import {ConfirmationDialogService} from "../confirmation-dialog/confirmation-dia
     selector: 'contact-editor',
     templateUrl: 'contact-editor.component.html'
 })
-export class ContactEditorComponent implements OnInit {
+export class ContactEditorComponent implements OnInit, OnDestroy {
 
     private editing : boolean = false;
 
@@ -96,9 +96,12 @@ export class ContactEditorComponent implements OnInit {
     }
 
     ngOnInit(): void {
-
+        console.log("Contact editor created");
 
     }
 
+    ngOnDestroy(): void {
+        console.log("Contact editor destroyed");
+    }
 
 }
